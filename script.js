@@ -34,7 +34,6 @@ reset.addEventListener('click', function(){
 })
 
 stop.addEventListener('click', function(){
-
     stopInterval()
     startTimer = undefined;
     
@@ -63,6 +62,8 @@ function timer(){
 
     //Increment Counter by one if one full cycle is completed
     if(wm.innerText == 0 && ws.innerText == 0 && bm.innerText == 0 && bs.innerText == 0){
+        const audio = document.getElementById("audio");
+        audio.play();
         wm.innerText = 25;
         ws.innerText = "00";
 

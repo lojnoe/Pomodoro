@@ -14,6 +14,8 @@ var startTimer;
 start.addEventListener('click', function(){
     if(startTimer === undefined){
         startTimer = setInterval(timer, 1000)
+        const audio1 = document.getElementById("comenzar");
+        audio1.play();
     } else {
         alert("Timer is already running");
     }
@@ -32,8 +34,10 @@ reset.addEventListener('click', function(){
 })
 
 stop.addEventListener('click', function(){
+
     stopInterval()
     startTimer = undefined;
+    
 })
 
 
